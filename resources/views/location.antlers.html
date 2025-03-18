@@ -1,0 +1,30 @@
+	
+
+
+<div>
+	<div class="mx-auto max-w-4xl pb-8">
+		{{ if hero_image }}
+			<img src="{{ hero_image }}" alt="" class="-mt-12 -rotate-2 mb-8 shadow-lg w-132 block mx-auto">
+		{{ /if }}
+			{{ if title_graphic }}
+				<img src="{{ title_graphic }}" class="h-24 mb-4 mx-auto block" alt="">
+			{{ /if }}
+			<div class="text-center text-4xl mb-8 ">{{ title }}</div>
+		</div>
+		<div class="flex text-center mb-12">
+			<div class="w-1/2">
+				
+				<div class="text-2xl">Address</div>
+				<address>
+					<div>{{ address }}</div>
+					<div>{{ city }}, {{ state }}  {{ zip }}</div>
+				</address>
+			</div>
+			<div class="w-1/2">
+				<div class="text-2xl">Hours</div>
+				<div>{{ hours }}</div>
+			</div>
+		</div>
+	</div>
+	
+</div>

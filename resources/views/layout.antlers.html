@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title ?? site:name }}</title>
+        <script src="https://kit.fontawesome.com/8753c29d43.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+        <script src="/vendor/statamic/frontend/js/helpers.js"></script>
+        {{ vite src="resources/js/site.js|resources/css/site.css" }}
+        
+    </head>
+    <body class="bg-slate-100 dark:bg-gray-800 font-display leading-normal text-slate-800 dark:text-gray-400">
+        <ul class="flex flex-row justify-center items-center bg-white mb-8">
+            <li class="p-8 text-xl" >
+                <a href="/">
+                    <img src="/assets/brand/lec-primary-logo.jpg" class="h-30" alt="">
+                </a>
+            </li>
+            {{ nav include_home="true" handle="header"}}
+                <li class="p-8 text-2xl text-gray-700 hover:text-lec-pistachio" >
+                    <a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ /if }}>
+                        {{ title }}
+                    </a>
+                </li>
+            {{ /nav }}
+           <li class="p-8 text-xl text-lec-pistachio hover:text-lec-espresso"><i class="fa-2x fa-brands fa-instagram"></i></li>
+        </ul>
+        <div class="">
+            {{ template_content }}
+        </div>
+        <div class="pt-12 pb-8 bg-lec-pistachio text-white">
+            <div class="max-w-6xl mx-auto grid grid-cols-4">
+                <div>footer menu</div>
+                <div>
+                </div>
+                <div>
+                    <p class="font-bold">Asbury Park Location</p>
+                    <p>Steinbach Building</p>
+                    <p>539 Cookman Ave</p>
+                    <p>Asbury Park, NJ 07712</p>
+
+                </div>
+                <div>
+                    <p class="font-bold">Nashville Location</p>
+                    <p>1616 Broadway</p>
+                    <p>Nashvile, TN 37027</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="text-center pt-8 pb-4 bg-black">&copy; 2025 Lola's European Cafe</div>
+    </body>
+</html>

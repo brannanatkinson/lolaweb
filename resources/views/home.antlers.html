@@ -1,0 +1,77 @@
+
+<div class="bg-black">
+    <div class="mx-auto div max-w-6xl -my-4">
+        <div class="grid lg:grid-cols-2 gap-4">
+            <a href="/asbury">
+                <div class="-rotate-2 bg-white shadow-lg pb-4">
+                    <div class="flex justify-end items-end p-8 h-96 bg-[url(https://lolaseuropeancafe.test/assets/brand/lolas-nj-front.jpg)] bg-cover">
+                        <span class="text-2xl text-white">Est. 2012</span>
+                       
+                    </div>
+                    <div class="mt-4">
+                        <div class="text-center">
+                            <div class="mb-2 text-lec-espresso text-4xl">Asbury Park, New Jersey</div>
+                            <div class="text-lec-pistachio text-xl">539 Cookman Avenue</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="/nashville">
+                <div class="rotate-3 bg-white shadow-lg pb-4">
+                    <div class="flex justify-end items-end p-8 h-96 bg-[url(https://lolaseuropeancafe.test/assets/brand/img_8684.jpeg)] bg-cover">
+                        <span class="text-2xl text-white">Est. 2025</span>
+                    </div>
+                    <div class="mt-4 text-2xl">
+                            <div class="text-center">
+                                <div class="mb-2 text-lec-espresso text-4xl">Nashville, Tenneseee</div>
+                                <div class="text-lec-pistachio text-xl">1616 Broadway</div>
+                            </div>
+                        </div>
+                </div>     
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white">
+    <div class="mx-auto div max-w-6xl">
+        <div class="grid lg:grid-cols-4 gap-8 pt-12 pb-16">
+            <div class="col-span-4">
+            <img src="https://lolaseuropeancafe.test/assets/brand/jolly_car.png" class="block h-36 mx-auto"alt="">
+            </div>
+            <div class="col-span-4 md:px-48 font-display text-black text-4xl tracking-wider text-center -rotate-1">
+                <p class="rotate-1">Inspired by Italy. Born in Asbury Park.</p>
+                <p class="rotate-2">Perfected for Nashville.</p>
+            </div>
+            <div class="col-span-4 md:px-48 pb-4 text-xl text-center leading-8">
+                Lola's European Cafe has been an institution in Asbury, New Jersey, for than a decade. Customers love the feeling of class without any pretention. All of which is tailor made for our new location in Nashville, Tennessee. We look forward to hosting you soon.
+            </div>
+            {{ categories }}
+            <div class="flex flex-col text-center h-full">
+                <img src="{{ asset }}" class="h-18 mx-auto mb-4" alt="">
+               <div class="text-2xl mb-4">{{ category }}</div>
+               <div class="pb-4">{{ description }}</div>
+               <div class="flex flex-grow justify-center items-end">
+                   <a href="{{ link }}"><div class="px-4 py-2 bg-lec-espresso/80 text-white hover:bg-lec-pistachio hover:text-black rounded">See Menu</div></a>
+               </div>
+            </div>
+            {{ /categories }}
+        </div>
+    </div>
+</div>
+<div class="bg-lec-espresso">
+    <div class="mx-auto max-w-6xl -my-2">
+        <div class="flex flex-col md:flex-row gap-12 text-center text-4xl">
+            <div>
+            {{ glide src="https://lolaseuropeancafe.test/assets/brand/lolas-martini.jpg" width="400" filter="sepia"}}
+                <img src="{{ url }}" width="{{ width }}" class="-rotate-5 shadow-lg">
+            {{ /glide }}
+            </div>
+            <div class="flex flex-col justify-center items-center">
+            <p class="text-white">New Jersey's Best Espresso Martini</p>
+            <p class="text-white">Three Years In A Row</p>
+            <p class="text-lec-pistachio mt-4 -rotate-1">Now available in Nashville</p>
+            </div>
+        </div>
+    </div>
+</div>

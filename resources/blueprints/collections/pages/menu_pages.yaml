@@ -1,0 +1,125 @@
+title: 'Menu Pages'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: hero_image
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Hero Image'
+          -
+            handle: title_graphic
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Title Graphic'
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: hero_text
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: 'Hero Text'
+          -
+            handle: locations
+            field:
+              type: replicator
+              display: Locations
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    location:
+                      display: Location
+                      fields:
+                        -
+                          handle: location
+                          field:
+                            type: text
+                            display: Location
+                        -
+                          handle: description
+                          field:
+                            type: markdown
+                            display: Description
+                        -
+                          handle: categories
+                          field:
+                            type: replicator
+                            display: Categories
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  category:
+                                    display: Category
+                                    fields:
+                                      -
+                                        handle: category
+                                        field:
+                                          type: text
+                                          display: Category
+                                      -
+                                        handle: description
+                                        field:
+                                          type: markdown
+                                          display: Description
+                                      -
+                                        handle: items
+                                        field:
+                                          type: replicator
+                                          display: Items
+                                          sets:
+                                            new_set_group:
+                                              display: 'New Set Group'
+                                              sets:
+                                                item:
+                                                  display: Item
+                                                  fields:
+                                                    -
+                                                      handle: item
+                                                      field:
+                                                        type: text
+                                                        display: Item
+                                                    -
+                                                      handle: description
+                                                      field:
+                                                        type: markdown
+                                                        display: Description
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

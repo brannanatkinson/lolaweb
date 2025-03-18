@@ -1,0 +1,108 @@
+
+
+{{ if title_graphic }}
+	<img src="{{ title_graphic }}" class="h-24 mb-8 mx-auto block sepia" alt="">
+{{ /if }}
+<div>
+	<div class="mx-auto max-w-4xl pb-8">
+		<div class="">
+			<div class="text-center text-4xl mb-8 ">{{ title }}</div>
+			<div class="text-center text-2xl leading-10">{{ hero_text }}</div>
+		</div>
+	</div>
+</div>
+{{ if hero_image }}
+<div class="-ml-12 h-64 bg-cover mb-12" style="background-image: url({{ hero_image }});"></div>
+{{ /if }}	
+<!-- Tabs -->
+<div
+    x-data="{
+        selectedId: null,
+        init() {
+            // Set the first available tab on the page on page load.
+            this.$nextTick(() => this.select(this.$id('tab', 1)))
+        },
+        select(id) {
+            this.selectedId = id
+        },
+        isSelected(id) {
+            return this.selectedId === id
+        },
+        whichChild(el, parent) {
+            return Array.from(parent.children).indexOf(el) + 1
+        }
+    }"
+    x-id="['tab']"
+    class="mx-auto max-w-4xl mb-12"
+>
+    <!-- Tab List -->
+    <ul
+        x-ref="tablist"
+        @keydown.right.prevent.stop="$focus.wrap().next()"
+        @keydown.home.prevent.stop="$focus.first()"
+        @keydown.page-up.prevent.stop="$focus.first()"
+        @keydown.left.prevent.stop="$focus.wrap().prev()"
+        @keydown.end.prevent.stop="$focus.last()"
+        @keydown.page-down.prevent.stop="$focus.last()"
+        role="tablist"
+        class="-mb-px flex items-stretch overflow-x-auto"
+    >
+    	{{ locations }}
+        <!-- Tab -->
+        <li>
+            <button
+                :id="$id('tab', whichChild($el.parentElement, $refs.tablist))"
+                @click="select($el.id)"
+                @mousedown.prevent
+                @focus="select($el.id)"
+                type="button"
+                :tabindex="isSelected($el.id) ? 0 : -1"
+                :aria-selected="isSelected($el.id)"
+                :class="isSelected($el.id) ? 'border-gray-200 bg-white text-lec-pistachio' : 'border-transparent'"
+                class="inline-flex text-2xl rounded-t-lg border-t border-l border-r px-5 py-2.5"
+                role="tab"
+            >{{ location }}</button>
+        </li>
+ 
+        {{ /locations }}
+    </ul>
+ 
+    <!-- Panels -->
+    
+    
+    <div role="tabpanels" class="rounded-b-lg rounded-tr-lg bg-white">
+    	{{ locations }}
+    	
+        <!-- Panel -->
+        <section
+            x-show="isSelected($id('tab', whichChild($el, $el.parentElement)))"
+            :aria-labelledby="$id('tab', whichChild($el, $el.parentElement))"
+            role="tabpanel"
+            class="p-8"
+        >
+        {{ categories }}
+            <div class="flex mb-8 gap-8">
+				<div class="w-1/3">
+					<div class="text-4xl mb-4">{{ category }}</div>
+					<div class="text-lec-pistachio">{{ description }}</div>
+				</div>
+				<div class="flex flex-col w-2/3">
+					{{ items }}
+					 	<div class="mb-4">
+							<div class="text-2xl">{{ item }}</div>
+							<div class="text-lec-espresso">{{ description }}</div>
+						</div>
+					{{ /items }}
+				</div>
+			</div>
+			{{ /categories }}	
+
+           
+        </section>
+  		
+       
+        {{ /locations }}
+    </div>
+    
+   
+</div>
