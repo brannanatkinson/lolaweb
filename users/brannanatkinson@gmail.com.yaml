@@ -1,0 +1,8 @@
+name: 'Brannan Atkinson'
+super: true
+id: 53718a9f-f098-457a-b2d9-6d32e244bb28
+password_hash: $2y$12$obuMXmcUzVh7rb6nQ/qHeuu2Sc/Oxt6FC7g0/GNWRvhjpu94cLmWa
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing
