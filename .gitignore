@@ -5,8 +5,11 @@
 /public/storage
 /public/vendor/statamic
 /storage/*.key
+/storage/statamic/users
 /storage/pail
 /vendor
+/content
+/resources/blueprints
 .env
 .env.backup
 .env.production
