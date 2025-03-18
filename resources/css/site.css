@@ -4,7 +4,14 @@
 @source "../views";
 @source "../../content";
 
-address {
+p {
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: .5rem;
+}
+address{
   font-style: normal;
 }
 

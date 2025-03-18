@@ -10,12 +10,22 @@ tabs:
             field:
               type: template
               display: 'Template Field'
+      -
+        display: Header
+        fields:
           -
             handle: hero_image
             field:
               container: assets
               type: assets
               display: 'Hero Image'
+              max_files: 1
+          -
+            handle: title_graphic
+            field:
+              container: assets
+              type: assets
+              display: 'Title Graphic'
               max_files: 1
           -
             handle: title
@@ -25,12 +35,16 @@ tabs:
               validate:
                 - required
           -
-            handle: title_graphic
+            handle: headline
             field:
-              container: assets
-              type: assets
-              display: 'Title Graphic'
-              max_files: 1
+              type: text
+              display: Headline
+          -
+            handle: description
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: Description
       -
         display: Address
         fields:
