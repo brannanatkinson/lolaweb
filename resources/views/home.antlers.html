@@ -1,10 +1,10 @@
 
 <div class="bg-black">
-    <div class="mx-auto div max-w-6xl -my-4">
-        <div class="-mt-12 grid lg:grid-cols-2 gap-4">
+    <div class="mx-auto div max-w-6xl -my-4 px-4 md:px-0">
+        <div class="md:-mt-12 grid md:grid-cols-2 gap-4">
             <a href="/asbury">
                 <div class="-rotate-2 bg-white shadow-lg pb-4">
-                    <div class="flex justify-end items-end p-8 h-96 bg-cover" style="background-image: url('/assets/brand/lolas-nj-front.jpg');">
+                    <div class="flex justify-end items-end p-8 h-64 md:h-96 bg-cover" style="background-image: url('/assets/brand/lolas-nj-front.jpg');">
                         <span class="text-2xl text-white">Est. 2012</span>
                        
                     </div>
@@ -18,7 +18,7 @@
             </a>
             <a href="/nashville">
                 <div class="rotate-3 bg-white shadow-lg pb-4">
-                    <div class="h-96 bg-cover" style="background-image: url('/assets/brand/img_8684.jpeg');">
+                    <div class="h-64 md:h-96 bg-cover" style="background-image: url('/assets/brand/img_8684.jpeg');">
                         <div class="flex justify-center items-center w-full h-full backdrop-blur-md">
                             <div class="text-5xl text-black">Coming Soon!</div>
                         </div>
@@ -38,20 +38,20 @@
 </div>
 
 <div class="bg-white">
-    <div class="mx-auto div max-w-6xl">
-        <div class="grid lg:grid-cols-4 gap-8 pt-12 pb-16">
-            <div class="col-span-4">
+    <div class="mx-auto div max-w-6xl px-4 md:px-0">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pt-12 pb-16">
+            <div class="md:col-span-4">
             <img src="/assets/brand/jolly_car.png" class="block h-36 mx-auto"alt="">
             </div>
-            <div class="col-span-4 md:px-48 font-display text-black text-4xl tracking-wider text-center -rotate-1">
+            <div class="md:col-span-4 md:px-48 font-display text-black text-4xl tracking-wider text-center -rotate-1">
                 <div class="rotate-1">Inspired by Italy. Born in Asbury.</div>
                 <div class="rotate-2">Perfected for Music City.</div>
             </div>
-            <div class="col-span-4 md:px-48 pb-4 text-xl text-center leading-8">
+            <div class="md:col-span-4 md:px-48 pb-4 text-xl text-center leading-8">
                 Lola's European Cafe has been an institution in Asbury, New Jersey, for than a decade. Customers love the feeling of class without any pretention. All of which is tailor made for our new location in Nashville, Tennessee. We look forward to hosting you soon.
             </div>
             {{ categories }}
-            <div class="flex flex-col text-center h-full">
+            <div class="flex flex-col text-center h-full border-b-1 md:border-b-0 pb-8">
                 <img src="{{ asset }}" class="h-18 mx-auto mb-4" alt="">
                <div class="text-2xl mb-4">{{ category }}</div>
                <div class="pb-4">{{ description }}</div>
@@ -64,17 +64,17 @@
     </div>
 </div>
 <div class="bg-lec-espresso">
-    <div class="mx-auto max-w-6xl -my-2">
-        <div class="flex flex-col md:flex-row gap-12 text-center text-4xl">
+    <div class="mx-auto max-w-6xl md:-my-2 px-4 md:px-0">
+        <div class="flex flex-col md:flex-row gap-12 text-center md:text-4xl">
             <div>
             {{ glide src="/assets/brand/lolas-martini.jpg" width="400" filter="sepia"}}
                 <img src="{{ url }}" width="{{ width }}" class="-rotate-5 shadow-lg">
             {{ /glide }}
             </div>
-            <div class="flex flex-col justify-center items-center">
-            <div class="text-white">New Jersey's Best Espresso Martini</div>
-            <div class="text-white">Three Years In A Row</div>
-            <div class="text-lec-pistachio mt-4 -rotate-1">Now available in Nashville</div>
+            <div class="flex flex-col justify-center items-center text-2xl md:text-4xl">
+                <div class="text-white">New Jersey's Best Espresso Martini</div>
+                <div class="text-white">Three Years In A Row</div>
+                <div class="text-lec-pistachio mt-4 -rotate-1 pb-12">Now available in Nashville</div>
             </div>
         </div>
     </div>
