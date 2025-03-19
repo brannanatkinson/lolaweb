@@ -43,18 +43,18 @@ categories:
     link: 'entry::a3c404b3-abad-457a-9e82-b1ce736c9634'
   -
     id: m8budj7n
-    category: 'Delectable Bites'
+    category: 'Delectable Small Plates'
     description:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Simple but significant. We feature small plates, paninis, flatbreads and more that are perfect for one or to share.'
+            text: 'Simple but delicious. We feature small plates, paninis, flatbreads and more that are perfect for one or to share.'
     asset: menu/sign_paninis.png
     link: 'entry::aadeeb38-2100-4096-a902-e762355ce662'
 updated_by: 53718a9f-f098-457a-b2d9-6d32e244bb28
-updated_at: 1742246997
+updated_at: 1742304188
 ---
 ## Welcome to your brand new Statamic site!
 
