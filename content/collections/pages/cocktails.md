@@ -4,7 +4,7 @@ blueprint: menu_pages
 title: 'Craft Cocktails'
 author: 53718a9f-f098-457a-b2d9-6d32e244bb28
 updated_by: 53718a9f-f098-457a-b2d9-6d32e244bb28
-updated_at: 1742251116
+updated_at: 1742398688
 locations:
   -
     id: m8dgoivg
@@ -30,6 +30,36 @@ locations:
             id: m8dgpo1t
             item: 'Grasshopper Martini'
             description: 'Stoli Vanilla . Dark Cocoa . Creme de Menthe . Mint Chocolate Chip Gelato'
+            type: item
+            enabled: true
+        type: category
+        enabled: true
+      -
+        id: m8g32zcc
+        category: 'Boozy Milkshakes'
+        items:
+          -
+            id: m8g359lj
+            item: 'Bacio Di Nocciola'
+            description: 'Bacio Gelato . Frangelico . Bourbon'
+            type: item
+            enabled: true
+          -
+            id: m8g35xqt
+            item: "Cookies n' Cream"
+            description: 'Oreo Infused Gelato . Vanilla Vodka . Chocolate Liqueur . Topped with Oreo crumble and Whipped Cream'
+            type: item
+            enabled: true
+          -
+            id: m8g36127
+            item: 'Root Beer Float'
+            description: 'Stoli Vanilla . Dark Cocoa . Coffe Liquor . Homemade Vanilla Gelato'
+            type: item
+            enabled: true
+          -
+            id: m8g364bb
+            item: 'Creamsicle Float'
+            description: 'Stoli Vanilla . Cointreau . Vanilla Gelato . Orange Soda'
             type: item
             enabled: true
         type: category

@@ -11,7 +11,7 @@
 			{{ /if }}
 			<div class="text-center text-2xl mb-8 ">{{ title }}</div>
 		
-		<div class="flex mb-12 gap-8">
+		<div class="flex mb-12 gap-8 flex-row-reverse md:flex-row flex-col">
 			<div class="w-2/3">
 				<div class="text-4xl mb-4">{{ headline }}</div>
 				<div>{{ description }}</div>
@@ -24,6 +24,9 @@
 						<div>{{ address }}</div>
 						<div>{{ city }}, {{ state }}  {{ zip }}</div>
 					</address>
+					<div class="mt-4">
+						<a href="https://maps.app.goo.gl/Dpv461bH15GZmZau7?g_st=com.google.maps.preview.copy" class="hover:text-lec-espresso"><i class="fa-regular fa-location-dot mr-2 "></i>Get directions</a>
+					</div>	
 				</div>
 				<div class="w-full">
 					<div class="text-2xl mb-2">Hours</div>

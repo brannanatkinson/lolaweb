@@ -4,7 +4,7 @@ blueprint: menu_pages
 title: 'Homemade Gelato'
 author: 53718a9f-f098-457a-b2d9-6d32e244bb28
 updated_by: 53718a9f-f098-457a-b2d9-6d32e244bb28
-updated_at: 1742246061
+updated_at: 1742398225
 template: menu
 hero_text:
   -
@@ -53,35 +53,15 @@ locations:
           -
             id: m8dfa62z
             item: 'Waffle Cone'
-            description: 'Three Scoops'
-            type: item
-            enabled: true
-          -
-            id: m8dfa878
-            item: 'Pistachio Small'
-            description: 'One Scoop'
-            type: item
-            enabled: true
-          -
-            id: m8dfaav9
-            item: 'Pistachio Medium'
             description: 'Two Scoops'
             type: item
             enabled: true
           -
-            id: m8dfadtl
-            item: 'Pistachio Large'
-            description: 'Three Scoops'
+            id: m8dfa878
+            item: Milkshake
+            description: 'Blended with two scoops'
             type: item
             enabled: true
-        type: category
-        enabled: true
-      -
-        id: m8dfdje4
-        category: Sorbetto
-        description: |-
-          Sample of Delicious Flavors
-          Dark Chocolate - Lemon - Mango - Cherry - Blood Orange - Raspberry
         type: category
         enabled: true
     type: location
